@@ -70,8 +70,7 @@ public class DorgeshKaanAgilityCourse extends Plugin
 		requestedItem1 = config.requestedItem1();
 		requestedItem2 = config.requestedItem2();
 
-		// Plugin startup is not guaranteed to run on the RuneLite client thread.
-		// Any reads of client state (inventory/widgets/player) must be done on the client thread.
+		// Should fix https://github.com/Anderzenn/dorgesh-kaan-agility-course/issues/1
 		clientThread.invokeLater(this::updateOverlay);
 	}
 
