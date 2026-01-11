@@ -70,7 +70,8 @@ public class DorgeshKaanAgilityCourse extends Plugin
 		requestedItem1 = config.requestedItem1();
 		requestedItem2 = config.requestedItem2();
 
-		updateOverlay();
+		// Should fix https://github.com/Anderzenn/dorgesh-kaan-agility-course/issues/1
+		clientThread.invokeLater(this::updateOverlay);
 	}
 
 	@Override
